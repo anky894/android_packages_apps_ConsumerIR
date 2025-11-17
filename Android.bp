@@ -11,6 +11,7 @@ android_app_import {
     required: [
         "com.oplus.consumerIRApp-safetyLabel.xml",
         "oplus-hiddenapi-package-allowlist.xml",
+        "preinstalled-packages-platform-oplus-product.xml",
     ],
 }
 
@@ -24,6 +25,13 @@ prebuilt_etc_xml {
 prebuilt_etc_xml {
     name: "oplus-hiddenapi-package-allowlist.xml",
     src: "configs/oplus-hiddenapi-package-allowlist.xml",
+    sub_dir: "sysconfig",
+    product_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "preinstalled-packages-platform-oplus-product.xml",
+    src: "configs/preinstalled-packages-platform-oplus-product.xml",
     sub_dir: "sysconfig",
     product_specific: true,
 }
